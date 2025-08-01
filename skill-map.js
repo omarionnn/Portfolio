@@ -78,10 +78,25 @@ class SkillMap {
             });
         });
         
-        // Region hover effects
+        // Region interactions (mobile-friendly)
         document.querySelectorAll('.region').forEach(region => {
+            // Desktop hover effects
             region.addEventListener('mouseenter', this.handleRegionHover.bind(this));
             region.addEventListener('mouseleave', this.handleRegionLeave.bind(this));
+            
+            // Mobile touch interactions
+            region.addEventListener('click', (e) => {
+                e.stopPropagation();
+                this.handleRegionClick(region);
+            });
+            
+            // Keyboard navigation
+            region.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    this.handleRegionClick(region);
+                }
+            });
         });
         
         // Mini-map node clicks
@@ -208,6 +223,30 @@ class SkillMap {
         const regionType = region.dataset.region;
         
         // Highlight related projects
+        document.querySelectorAll('.project-node').forEach(node => {
+            const projectId = node.dataset.project;
+            const project = this.projectData[projectId];
+            
+            if (this.isProjectInRegion(project, regionType)) {
+                node.style.transform = 'scale(1.2)';
+                node.style.zIndex = '200';
+            }
+        });
+        
+        // Highlight connection lines
+        document.querySelectorAll('.connection-line').forEach(line => {
+            line.classList.add('active');
+        });
+    }
+    
+    handleRegionClick(region) {
+        // Toggle expanded state for mobile
+        const isExpanded = region.getAttribute('aria-expanded') === 'true';
+        region.setAttribute('aria-expanded', !isExpanded);
+        region.classList.toggle('expanded');
+        
+        // Highlight related projects
+        const regionType = region.dataset.region;
         document.querySelectorAll('.project-node').forEach(node => {
             const projectId = node.dataset.project;
             const project = this.projectData[projectId];
