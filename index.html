@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="ai-assistant.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
@@ -177,79 +178,12 @@
                     <div class="projects-section">
                         <h2 class="section-title">Projects</h2>
                         
-                        <div class="projects-grid">
-                            <div class="project-card" data-aos="fade-up">
-                                <div class="project-content">
-                                    <h3 class="project-title">Socialize</h3>
-                                    <div class="project-role">Web App Developer</div>
-                                    <div class="project-description">
-                                        <ul>
-                                            <li>Engineered a social networking platform using Flask and Bootstrap 5, achieving a 30% improvement in page load times and a 25% increase in user engagement through real-time interactions.</li>
-                                            <li>Designed a responsive interface compatible with various devices, resulting in a 40% boost in mobile user satisfaction.</li>
-                                            <li>Integrated anonymous user profiles, post creation, likes, retweets, and messaging features, leading to a 50% rise in user activity and a 35% growth in user retention.</li>
-                                        </ul>
-                                    </div>
-                                    <div class="project-tech">
-                                        <span class="tech-tag">Flask</span>
-                                        <span class="tech-tag">Python</span>
-                                        <span class="tech-tag">Bootstrap</span>
-                                    </div>
-                                    <a href="https://github.com/omarionnn/socialize" target="_blank" class="project-link">
-                                        <i class="fas fa-external-link-alt"></i> View Project
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="project-card" data-aos="fade-up" data-aos-delay="100">
-                                <div class="project-content">
-                                    <h3 class="project-title">BigOrders</h3>
-                                    <div class="project-role">Web App Developer</div>
-                                    <div class="project-description">
-                                        <ul>
-                                            <li>Developed BigOrders, a web-based platform that streamlines group food ordering, enabling multiple users to collaboratively create and manage orders in real-time, resulting in a 40% reduction in order processing time.</li>
-                                            <li>Implemented secure user authentication with session management, ensuring user-specific data isolation and enhancing platform security, leading to a 30% increase in user trust and engagement.</li>
-                                            <li>Designed a comprehensive receipt generation system that groups items by user, calculates individual subtotals, and provides a total for the group order, simplifying the payment process and reducing billing errors by 25%.</li>
-                                        </ul>
-                                    </div>
-                                    <div class="project-tech">
-                                        <span class="tech-tag">Flask</span>
-                                        <span class="tech-tag">Python</span>
-                                        <span class="tech-tag">JavaScript</span>
-                                        <span class="tech-tag">SQLite</span>
-                                        <span class="tech-tag">Gunicorn</span>
-                                    </div>
-                                    <a href="https://github.com/omarionnn/mosu" target="_blank" class="project-link">
-                                        <i class="fas fa-external-link-alt"></i> View Project
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="project-card" data-aos="fade-up" data-aos-delay="200">
-                                <div class="project-content">
-                                    <h3 class="project-title">Saafi DevOps Platform</h3>
-                                    <div class="project-role">Full Stack Developer</div>
-                                    <div class="project-description">
-                                        <ul>
-                                            <li>Developed Saafi, a developer-first self-service DevOps platform for fast, secure, multi-cloud infrastructure provisioning (AWS & GCP) with GitHub integration.</li>
-                                            <li>Implemented a monorepo structure with a Next.js frontend, Express backend, and infrastructure automation using Terraform/Pulumi.</li>
-                                            <li>Integrated Supabase for authentication and database, enabling user-specific environment management and blueprint marketplace features.</li>
-                                            <li>Enabled PR-triggered environment provisioning, secrets management, and cost/usage tracking for modern DevOps workflows.</li>
-                                        </ul>
-                                    </div>
-                                    <div class="project-tech">
-                                        <span class="tech-tag">TypeScript</span>
-                                        <span class="tech-tag">Next.js</span>
-                                        <span class="tech-tag">Express</span>
-                                        <span class="tech-tag">Supabase</span>
-                                        <span class="tech-tag">Terraform</span>
-                                        <span class="tech-tag">Pulumi</span>
-                                        <span class="tech-tag">AWS</span>
-                                        <span class="tech-tag">GCP</span>
-                                    </div>
-                                    <a href="https://github.com/omarionnn/Saafi_Devops" target="_blank" class="project-link">
-                                        <i class="fas fa-external-link-alt"></i> View Project
-                                    </a>
-                                </div>
+                        <!-- Interactive Skill Map -->
+                        <div class="skill-map-section" data-aos="fade-up">
+                            <h3 class="skill-map-title">Interactive Skill Map</h3>
+                            <p class="skill-map-description">Explore my technical landscape and project relationships through this interactive visualization.</p>
+                            <div class="skill-map-embed">
+                                <iframe src="skill-map.html" frameborder="0" width="100%" height="600px"></iframe>
                             </div>
                         </div>
                     </div>
@@ -260,5 +194,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script src="script.js"></script>
+    <script src="ai-assistant.js"></script>
 </body>
 </html>
