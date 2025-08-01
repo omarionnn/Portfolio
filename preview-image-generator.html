@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Preview Image Generator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background: #000;
+        }
+        
+        .preview-container {
+            width: 1200px;
+            height: 630px;
+            background: linear-gradient(135deg, #4facfe 0%, #0093E9 100%);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            padding: 0 80px;
+            box-sizing: border-box;
+        }
+        
+        .profile-section {
+            flex: 0 0 40%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .profile-photo {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+        
+        .content-section {
+            flex: 0 0 60%;
+            padding-left: 40px;
+            color: white;
+        }
+        
+        .name {
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 8px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        
+        .title {
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 1.3;
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+        
+        .company {
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 1.3;
+            margin-bottom: 30px;
+            opacity: 0.8;
+        }
+        
+        .skills {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 1.4;
+            margin-bottom: 60px;
+            opacity: 0.9;
+        }
+        
+        .cta {
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 1.2;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Subtle background elements */
+        .bg-element {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        .bg-element-1 {
+            width: 200px;
+            height: 200px;
+            top: -100px;
+            right: -100px;
+        }
+        
+        .bg-element-2 {
+            width: 150px;
+            height: 150px;
+            bottom: -75px;
+            left: -75px;
+        }
+        
+        .bg-element-3 {
+            width: 100px;
+            height: 100px;
+            top: 50%;
+            right: 20%;
+        }
+    </style>
+</head>
+<body>
+    <div class="preview-container">
+        <!-- Background elements -->
+        <div class="bg-element bg-element-1"></div>
+        <div class="bg-element bg-element-2"></div>
+        <div class="bg-element bg-element-3"></div>
+        
+        <!-- Profile section -->
+        <div class="profile-section">
+            <img src="profile.JPG" alt="Omari Nyarko" class="profile-photo">
+        </div>
+        
+        <!-- Content section -->
+        <div class="content-section">
+            <div class="name">Omari Nyarko</div>
+            <div class="title">Software Engineer</div>
+            <div class="company">BigOrders</div>
+            <div class="skills">Python | React | AWS | AI</div>
+            <div class="cta">View Portfolio</div>
+        </div>
+    </div>
+    
+    <script>
+        // Instructions for saving the image
+        console.log('To save this as an image:');
+        console.log('1. Open this file in a browser');
+        console.log('2. Take a screenshot of the preview area (1200x630px)');
+        console.log('3. Save as "portfolio-preview.jpg" in your Portfolio folder');
+        console.log('4. The image will be used for social media link previews');
+    </script>
+</body>
+</html> 
